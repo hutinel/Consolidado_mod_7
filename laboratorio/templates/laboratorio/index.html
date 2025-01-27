@@ -1,0 +1,20 @@
+<!-- templates/laboratorio/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'laboratorio/css/styles.css' %}">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Bienvenido a la Página de Inicio</h1>
+        <p>Esta es la página principal del sitio web.</p>
+        <a href="{% url 'laboratorio_list' %}" class="btn btn-primary">Ver Laboratorios</a>
+    </div>
+</body>
+</html>

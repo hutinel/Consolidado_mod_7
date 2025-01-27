@@ -1,0 +1,41 @@
+/* laboratorio_form */
+h1 {
+    margin-left: 10%;
+}
+
+.container-form {
+    
+    align-items: center; 
+    justify-content: center;
+}
+
+label {
+    display: inline-block;
+    width: 70px;
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 15px;
+}
+
+form{
+    border: 10px outset; 
+    border-radius: 4px;
+    margin: 20px;
+    padding: 20px;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}

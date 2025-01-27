@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion de Laboratorios</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type='text/css' href="{% static 'css/laboratorio_list.css' %}">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Información de Laboratorios</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Ciudad</th>
+                    <th>País</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for laboratorio in laboratorios %}
+                <tr>
+                    <td>{{ laboratorio.nombre }}</td>
+                    <td>{{ laboratorio.ciudad }}</td>
+                    <td>{{ laboratorio.pais }}</td>
+                    <td>
+                        <a href="{% url 'laboratorio_update' laboratorio.id %}" class="btn btn-primary">Actualizar</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'laboratorio_delete' laboratorio.id %}" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'laboratorio_create' %}" class="btn btn-success">Crear Nuevo Laboratorio</a>
+        <p><a href="{% url 'index' %}">Ir a la pagina de Inicio</a></p>
+    </div>
+</body>
+</html>
